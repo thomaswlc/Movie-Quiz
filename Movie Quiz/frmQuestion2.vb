@@ -4,6 +4,7 @@
         progressCount = 0
         tmrQuestion2.Enabled = True
         ProgressBarQ2.Value = 0
+        frmMain.playTrack("Question 2.mp3")
         btnAnswer1.Checked = False
         btnAnswer2.Checked = False
         btnAnswer3.Checked = False
@@ -15,6 +16,7 @@
             playerScore = playerScore + 1
         End If
 
+        frmMain.stopTrack()
         frmQuestion3.Show()
 
         Me.Hide()
@@ -36,9 +38,14 @@
         If progressCount = 10 Then
             tmrQuestion2.Enabled = False
             MsgBox("Too slow!")
+            frmMain.stopTrack()
             frmQuestion3.Show()
             frmQuestion3.init()
             Me.Hide()
         End If
+    End Sub
+
+    Private Sub frmQuestion2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

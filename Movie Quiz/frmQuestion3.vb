@@ -4,6 +4,7 @@
         progressCount = 0
         tmrQuestion3.Enabled = True
         ProgressBarQ3.Value = 0
+        frmMain.playTrack("Question 3.mp3")
         btnAnswer1.Checked = False
         btnAnswer2.Checked = False
         btnAnswer3.Checked = False
@@ -15,6 +16,7 @@
             playerScore = playerScore + 1
         End If
 
+        frmMain.stopTrack()
         frmHighScore.Show()
         frmHighScore.doScore()
 
@@ -29,6 +31,7 @@
         If progressCount = 10 Then
             tmrQuestion3.Enabled = False
             MsgBox("Too slow!")
+            frmMain.stopTrack()
             frmHighScore.Show()
             frmHighScore.doScore()
             Me.Hide()
