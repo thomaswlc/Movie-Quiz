@@ -22,6 +22,7 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtPlayerName = New System.Windows.Forms.TextBox()
@@ -30,9 +31,11 @@ Partial Class frmMain
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.wmpQuiz = New AxWMPLib.AxWindowsMediaPlayer()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.wmpQuiz, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -107,11 +110,22 @@ Partial Class frmMain
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
+        'wmpQuiz
+        '
+        Me.wmpQuiz.Enabled = True
+        Me.wmpQuiz.Location = New System.Drawing.Point(291, 9)
+        Me.wmpQuiz.Name = "wmpQuiz"
+        Me.wmpQuiz.OcxState = CType(resources.GetObject("wmpQuiz.OcxState"), System.Windows.Forms.AxHost.State)
+        Me.wmpQuiz.Size = New System.Drawing.Size(186, 31)
+        Me.wmpQuiz.TabIndex = 10
+        Me.wmpQuiz.Visible = False
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.wmpQuiz)
         Me.Controls.Add(Me.btnStart)
         Me.Controls.Add(Me.btnQuit)
         Me.Controls.Add(Me.txtPlayerName)
@@ -125,6 +139,7 @@ Partial Class frmMain
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.wmpQuiz, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -138,4 +153,5 @@ Partial Class frmMain
     Friend WithEvents txtPlayerName As TextBox
     Friend WithEvents btnQuit As Button
     Friend WithEvents btnStart As Button
+    Friend WithEvents wmpQuiz As AxWMPLib.AxWindowsMediaPlayer
 End Class

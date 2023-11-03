@@ -22,6 +22,7 @@ Partial Class frmQuestion1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnAnswer1 = New System.Windows.Forms.RadioButton()
         Me.btnAnswer2 = New System.Windows.Forms.RadioButton()
@@ -31,6 +32,8 @@ Partial Class frmQuestion1
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnNext = New System.Windows.Forms.Button()
+        Me.tmrQuestion1 = New System.Windows.Forms.Timer(Me.components)
+        Me.ProgressBarQ1 = New System.Windows.Forms.ProgressBar()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -39,55 +42,55 @@ Partial Class frmQuestion1
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(38, 13)
+        Me.Label1.Location = New System.Drawing.Point(46, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(490, 48)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "How old is Gwen?"
+        Me.Label1.Text = "Who is Ben 10's cousin?"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'btnAnswer1
         '
         Me.btnAnswer1.AutoSize = True
-        Me.btnAnswer1.Location = New System.Drawing.Point(46, 30)
+        Me.btnAnswer1.Location = New System.Drawing.Point(20, 30)
         Me.btnAnswer1.Name = "btnAnswer1"
-        Me.btnAnswer1.Size = New System.Drawing.Size(37, 17)
+        Me.btnAnswer1.Size = New System.Drawing.Size(93, 17)
         Me.btnAnswer1.TabIndex = 3
         Me.btnAnswer1.TabStop = True
-        Me.btnAnswer1.Text = "10"
+        Me.btnAnswer1.Text = "Carl Tennyson"
         Me.btnAnswer1.UseVisualStyleBackColor = True
         '
         'btnAnswer2
         '
         Me.btnAnswer2.AutoSize = True
-        Me.btnAnswer2.Location = New System.Drawing.Point(46, 69)
+        Me.btnAnswer2.Location = New System.Drawing.Point(20, 69)
         Me.btnAnswer2.Name = "btnAnswer2"
-        Me.btnAnswer2.Size = New System.Drawing.Size(37, 17)
+        Me.btnAnswer2.Size = New System.Drawing.Size(94, 17)
         Me.btnAnswer2.TabIndex = 4
         Me.btnAnswer2.TabStop = True
-        Me.btnAnswer2.Text = "11"
+        Me.btnAnswer2.Text = "Ken Tennyson"
         Me.btnAnswer2.UseVisualStyleBackColor = True
         '
         'btnAnswer3
         '
         Me.btnAnswer3.AutoSize = True
-        Me.btnAnswer3.Location = New System.Drawing.Point(46, 108)
+        Me.btnAnswer3.Location = New System.Drawing.Point(20, 108)
         Me.btnAnswer3.Name = "btnAnswer3"
-        Me.btnAnswer3.Size = New System.Drawing.Size(37, 17)
+        Me.btnAnswer3.Size = New System.Drawing.Size(103, 17)
         Me.btnAnswer3.TabIndex = 5
         Me.btnAnswer3.TabStop = True
-        Me.btnAnswer3.Text = "13"
+        Me.btnAnswer3.Text = "Gwen Tennyson"
         Me.btnAnswer3.UseVisualStyleBackColor = True
         '
         'btnAnswer4
         '
         Me.btnAnswer4.AutoSize = True
-        Me.btnAnswer4.Location = New System.Drawing.Point(46, 147)
+        Me.btnAnswer4.Location = New System.Drawing.Point(20, 147)
         Me.btnAnswer4.Name = "btnAnswer4"
-        Me.btnAnswer4.Size = New System.Drawing.Size(37, 17)
+        Me.btnAnswer4.Size = New System.Drawing.Size(108, 17)
         Me.btnAnswer4.TabIndex = 6
         Me.btnAnswer4.TabStop = True
-        Me.btnAnswer4.Text = "16"
+        Me.btnAnswer4.Text = "Natalie Tennyson"
         Me.btnAnswer4.UseVisualStyleBackColor = True
         '
         'GroupBox1
@@ -114,9 +117,9 @@ Partial Class frmQuestion1
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Movie_Quiz.My.Resources.Resources.ben10raceagainsttime
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 64)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 86)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(187, 142)
+        Me.PictureBox1.Size = New System.Drawing.Size(182, 142)
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
@@ -130,11 +133,23 @@ Partial Class frmQuestion1
         Me.btnNext.Text = "Next"
         Me.btnNext.UseVisualStyleBackColor = True
         '
+        'tmrQuestion1
+        '
+        Me.tmrQuestion1.Interval = 1000
+        '
+        'ProgressBarQ1
+        '
+        Me.ProgressBarQ1.Location = New System.Drawing.Point(12, 268)
+        Me.ProgressBarQ1.Name = "ProgressBarQ1"
+        Me.ProgressBarQ1.Size = New System.Drawing.Size(423, 23)
+        Me.ProgressBarQ1.TabIndex = 9
+        '
         'frmQuestion1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(593, 312)
+        Me.Controls.Add(Me.ProgressBarQ1)
         Me.Controls.Add(Me.btnNext)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.PictureBox2)
@@ -159,4 +174,6 @@ Partial Class frmQuestion1
     Friend WithEvents btnAnswer4 As RadioButton
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnNext As Button
+    Friend WithEvents tmrQuestion1 As Timer
+    Friend WithEvents ProgressBarQ1 As ProgressBar
 End Class

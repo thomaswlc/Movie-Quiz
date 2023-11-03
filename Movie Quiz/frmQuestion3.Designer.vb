@@ -22,6 +22,7 @@ Partial Class frmQuestion3
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnAnswer4 = New System.Windows.Forms.RadioButton()
         Me.btnAnswer3 = New System.Windows.Forms.RadioButton()
@@ -31,6 +32,8 @@ Partial Class frmQuestion3
         Me.btnNext = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ProgressBarQ3 = New System.Windows.Forms.ProgressBar()
+        Me.tmrQuestion3 = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -130,18 +133,30 @@ Partial Class frmQuestion3
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
+        'ProgressBarQ3
+        '
+        Me.ProgressBarQ3.Location = New System.Drawing.Point(12, 282)
+        Me.ProgressBarQ3.Name = "ProgressBarQ3"
+        Me.ProgressBarQ3.Size = New System.Drawing.Size(415, 24)
+        Me.ProgressBarQ3.TabIndex = 10
+        '
+        'tmrQuestion3
+        '
+        Me.tmrQuestion3.Interval = 1000
+        '
         'frmQuestion3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(585, 330)
+        Me.Controls.Add(Me.ProgressBarQ3)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnNext)
         Me.Name = "frmQuestion3"
-        Me.Text = "Top Boy"
+        Me.Text = "        "
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -159,4 +174,6 @@ Partial Class frmQuestion3
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnNext As Button
+    Friend WithEvents ProgressBarQ3 As ProgressBar
+    Friend WithEvents tmrQuestion3 As Timer
 End Class
