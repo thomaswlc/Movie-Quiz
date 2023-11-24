@@ -15,4 +15,8 @@
     Private Sub btnQuit_Click(sender As Object, e As EventArgs) Handles btnQuit.Click
         Application.Exit()
     End Sub
+
+    Private Sub frmHighScore_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

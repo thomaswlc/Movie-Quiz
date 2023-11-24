@@ -1,12 +1,4 @@
 ﻿Public Class frmMain
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
-    End Sub
-
     Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
         playerScore = 0
         playerName = txtPlayerName.Text
@@ -24,12 +16,8 @@
         wmpQuiz.Ctlcontrols.stop()
         wmpQuiz.URL = track
         wmpQuiz.Ctlcontrols.play()
-
-        Public Sub stopTrack()
-        wmpQuiz.Ctlcontrols.stop()
     End Sub
-
-    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Public Sub stopTrack()
+        wmpQuiz.Ctlcontrols.stop()
     End Sub
 End Class
